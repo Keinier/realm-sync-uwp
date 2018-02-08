@@ -1,0 +1,18 @@
+﻿<Page  
+    x:Class="Realm_Sync.Views.StartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Realm_Sync.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding StartPageInstance, Source={StaticResource Locator}}" 
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="{Binding Customer.No}" FontFamily="Segoe UI Historic" Margin="20,28,1137,952" Width="343" />
+        <TextBlock Text="{Binding Customer.Name}" FontFamily="Segoe UI Historic" Margin="20,51,1114,929" Width="366" />
+        <TextBlock Text="{Binding Customer.LastName}" FontFamily="Segoe UI Historic" Margin="20,85,1019,895" Width="461" />
+        <Button Content="Sync" HorizontalAlignment="Left" Margin="80,112,0,0" VerticalAlignment="Top" Width="113"/>
+
+    </Grid>
+</Page>
