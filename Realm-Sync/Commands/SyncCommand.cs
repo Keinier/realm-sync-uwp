@@ -26,7 +26,7 @@ namespace Realm_Sync.Commands
 
         public bool CanExecute(object parameter)
         {
-            return _viewmodel.RealmContext != null;
+            return true; // _viewmodel.RealmContext != null;
         }
 
         public void Execute(object parameter)
@@ -36,6 +36,8 @@ namespace Realm_Sync.Commands
 
                 _viewmodel.RealmContext.Add(_viewmodel.Customer);
             });
+
+            _viewmodel.Customer = new Models.CustomerModel();
 
         }
     }

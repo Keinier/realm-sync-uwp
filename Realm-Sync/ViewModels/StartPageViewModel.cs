@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Realm_Sync.Commands;
 using Realm_Sync.Models;
 using Realms;
 using Realms.Sync;
@@ -11,7 +12,7 @@ namespace Realm_Sync.ViewModels
 {
     public class StartPageViewModel : ViewModelBase
     {
-        public RelayCommand SyncCommand { get; set; }
+        public SyncCommand SyncCommand { get; set; }
 
         public CustomerModel Customer { get; set; }
 
@@ -57,6 +58,7 @@ namespace Realm_Sync.ViewModels
         {
             Customer = new CustomerModel();
 
+            SyncCommand = new SyncCommand(this);
             LocalRealmInitialization();
 
             LoginToServerAsync();

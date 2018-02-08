@@ -6,13 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     DataContext="{Binding StartPageInstance, Source={StaticResource Locator}}" 
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="419" Height="485.5">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="{Binding Customer.No}" FontFamily="Segoe UI Historic" Margin="20,28,1137,952" Width="343" />
-        <TextBlock Text="{Binding Customer.Name}" FontFamily="Segoe UI Historic" Margin="20,51,1114,929" Width="366" />
-        <TextBlock Text="{Binding Customer.LastName}" FontFamily="Segoe UI Historic" Margin="20,85,1019,895" Width="461" />
-        <Button Content="Sync" HorizontalAlignment="Left" Margin="80,112,0,0" VerticalAlignment="Top" Width="113"/>
+
+        <TextBox Margin="13,12,18,0" Text="{Binding Customer.No}" VerticalAlignment="Top"/>
+        <TextBox Margin="15,51,19,0" Text="{Binding Customer.Name}" VerticalAlignment="Top"/>
+        <TextBox Margin="14,90,20,0" Text="{Binding Customer.LastName}" VerticalAlignment="Top"/>
+        <Button Content="Sync" HorizontalAlignment="Stretch" Command="{Binding SyncCommand}" Margin="17,137,16,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
