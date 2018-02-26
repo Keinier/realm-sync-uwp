@@ -95,7 +95,7 @@ namespace Realm_Sync.ViewModels
                     Console.WriteLine($"Got user logged in with refresh token {user.RefreshToken}");
                 }
 
-                var loginConf = new SyncConfiguration(user, new Uri("realm://green-retail.us1.cloud.realm.io/~/Draw"));
+                var loginConf = new SyncConfiguration(user, new Uri("realms://green-retail.us1.cloud.realm.io/~/Draw"));
                 RealmContext = Realm.GetInstance(loginConf);
                 //SetupPathChangeMonitoring();
             }
